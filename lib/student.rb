@@ -25,8 +25,8 @@ class Student
     # DB[:conn].execute(sql, name).map do |row|
     #   self.new_from_db(row)
     # end.first
-    row = DB[:conn].execute(sql, name)[0]
-    self.new_from_db(row)
+    bird = DB[:conn].execute(sql, name)[0]
+    self.new_from_db(bird)
   end
 
   def save
