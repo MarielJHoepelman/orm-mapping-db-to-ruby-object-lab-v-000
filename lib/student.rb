@@ -21,7 +21,7 @@ class Student
       FROM students
       WHERE name = ?
       LIMIT 1"
-      binding.pry
+  
     DB[:conn].execute(sql, name).map do |row|
       self.new_from_db(row)
     end.first
